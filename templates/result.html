@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PhiShield - Scan Result</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="PhiShield Logo" class="logo">
+    <p class="tagline">{{ text.tip }}</p>
+  </div>
+
+  <!-- 1) RESULT SUMMARY -->
+  <div class="result-card {{ report['result_color'] }}">
+    <h2>
+      {% if report['result_color'] == 'red' %}🔴{% endif %}
+      {% if report['result_color'] == 'yellow' %}🟡{% endif %}
+      {% if report['result_color'] == 'green' %}🟢{% endif %}
+      {{ report['final_result'] }}
+      <span style="font-size:0.95em; font-weight:600;">
+        &nbsp; Confidence: {{ report['confidence'] }}
+      </span>
+    </h2>
+
+    <p class="helper-note">{{ report['safety_line'] }}</p>
+
+    <p><strong>{{ report['total_score'] }}/100</strong> Overall Risk Score</p>
+
+    <div class="score-bar">
+      <div class="score-fill {{ report['result_color'] }}" data-score="{{ report['total_score'] }}"></div>
+    </div>
+
+    <div class="score-breakdown">
+      <span>Link Score: <strong>{{ report['link_score_total'] }}</strong></span>
+      <span>Text Score: <strong>{{ report['message_score'] }}</strong></span>
+    </div>
+  </div>
+
+  <!-- 2) MESSAGE ANALYZED (merged box) -->
+  <div class="card section-important">
+    <h3>Message Analyzed</h3>
+    <div class="message-box">{{ report['message'] }}</div>
+  </div>
+
+  <!-- 3) WHAT YOU SHOULD DO -->
+  <div class="card section-important">
+    <h3>What You Should Do</h3>
+    <ul>
+      {% for a in report['explainable']['actions'] %}
+        <li>{{ a }}</li>
+      {% endfor %}
+    </ul>
+    <p class="helper-note">
+      Tip: If unsure, contact the official school/bank number from their website or app (not the number in the message).
+    </p>
+  </div>
+
+  <!-- 4) WHY THIS RESULT -->
+  <div class="card">
+    <h3>Why PhiShield Gave This Result</h3>
+    <p>{{ report['explainable']['summary'] }}</p>
+
+    <h4 style="margin-top: 12px;">Top Reasons</h4>
+    <ul>
+      {% for r in report['top_reasons'] %}
+        <li>{{ r }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- 5) OPTIONAL DETAILS -->
+  <details class="card details-box">
+    <summary>More Details (Optional)</summary>
+
+    <div class="grid-2">
+      <div class="mini-card">
+        <h4>🤖 AI Second Opinion (Optional)</h4>
+        <p><strong>AI Result:</strong> {{ report['ml_label'] }}</p>
+        <p><strong>Scam Likelihood:</strong> {{ '%.0f'|format(report['ml_probs'].get('phishing',0)*100) }}%</p>
+        <p class="helper-note">This is the system’s learning-based check from past scam patterns.</p>
+      </div>
+
+      <div class="mini-card">
+        <h4>🧠 Safety Checks Used</h4>
+        <p><strong>Link score:</strong> {{ report['link_score_total'] }}</p>
+        <p><strong>Text score:</strong> {{ report['message_score'] }}</p>
+        <p><strong>Rule score:</strong> {{ report['rule_score'] }}/100</p>
+        <p class="helper-note">These checks look for suspicious words, commands, urgency, and risky links.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:16px;">
+      <h3>Link Check</h3>
+      <p class="helper-note">Website name = “google.com”, “t.me”, “maybank2u.com.my”, etc.</p>
+
+      {% if report['link_results'] and report['link_results'][0]['Status'] != "NO_LINK" %}
+        <ul class="link-list">
+          {% for lr in report['link_results'] %}
+            <li class="link-item">
+              <div><strong>Link:</strong> {{ lr['url'] }}</div>
+              <div><strong>Website name:</strong> {{ lr['domain'] }}</div>
+              <div><strong>Status:</strong> {{ lr['Status'] }} | <strong>Risk:</strong> {{ lr['risk_score'] }}/100</div>
+
+              <details class="details-box">
+                <summary>Why this link was rated like this</summary>
+                <ul>
+                  {% for exp in lr['explanations'] %}
+                    <li>{{ exp }}</li>
+                  {% endfor %}
+                </ul>
+              </details>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>No links detected in the message.</p>
+      {% endif %}
+    </div>
+
+    <div style="margin-top:16px;">
+      <h3>Simple Notes</h3>
+      <ul>
+        {% for g in report['glossary'] %}
+          <li>{{ g }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  </details>
+
+  <a href="{{ url_for('index') }}" class="btn-back">Scan Another Message</a>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

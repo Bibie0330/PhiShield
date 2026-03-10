@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PhiShield - Phishing Detection</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+<div class="container">
+
+<!-- Header -->
+<div class="header">
+    <img src="{{ url_for('static', filename='img/logo.png') }}" class="logo">
+    <p class="tagline">{{ text.tip }}</p>
+</div>
+
+<!-- How to Use -->
+<div class="card">
+
+<h3>How to Use PhiShield</h3>
+
+<p>1️⃣ Copy a message from <strong>WhatsApp</strong> or <strong>Telegram</strong></p>
+<p>2️⃣ Paste the message below</p>
+<p>3️⃣ Click <strong>{{ text.analyze_btn }}</strong></p>
+<p>4️⃣ PhiShield will explain if the message is <strong>Safe, Suspicious, or Phishing</strong>.</p>
+
+<p class="helper-note">
+PhiShield automatically checks suspicious links, phishing language patterns,
+and scam signals using AI and rule-based analysis.
+</p>
+
+</div>
+
+<!-- Detection Tool -->
+<div class="card">
+
+<h3>Message Detection Tool</h3>
+
+<form method="POST">
+
+<textarea
+id="messageInput"
+name="message"
+rows="5"
+placeholder="Paste the suspicious message here..."
+required>{{ message }}</textarea>
+
+{% if error %}
+<p style="color:red">{{ error }}</p>
+{% endif %}
+
+<button class="btn-analyze" type="submit">
+{{ text.analyze_btn }}
+</button>
+
+</form>
+
+</div>
+
+<!-- Example Messages -->
+<div class="card">
+
+<h3>Try Example Messages</h3>
+
+<ul>
+
+<li>
+<strong>Phishing Example</strong><br>
+URGENT: Your bank account suspended. Verify now.
+</li>
+
+<li>
+<strong>Delivery Scam</strong><br>
+Parcel cannot be delivered. Click link to update address.
+</li>
+
+<li>
+<strong>Safe Example</strong><br>
+Hi teacher, tomorrow got class?
+</li>
+
+</ul>
+
+<p class="helper-note">
+These examples demonstrate how PhiShield detects phishing patterns.
+</p>
+
+</div>
+
+<!-- Learn -->
+<div class="card">
+
+<h3>Learn About Phishing</h3>
+
+<p>
+Want to understand phishing scams and how to stay safe online?
+</p>
+
+<a href="{{ url_for('learn') }}" class="btn-learn">
+Learn More
+</a>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+
+<p>PhiShield © 2026</p>
+
+<p>
+AI-assisted phishing detection for WhatsApp and Telegram messages
+</p>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

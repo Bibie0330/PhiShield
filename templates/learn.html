@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhiShield - Learn</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="PhiShield Logo" class="logo">
+    <p class="tagline">{{ text.tip }}</p>
+  </div>
+
+  <!-- Top banner -->
+  <div class="learn-hero card section-important">
+    <h2>Learn About Phishing (For WhatsApp & Telegram)</h2>
+    <p class="helper-note">
+      This page explains phishing in simple terms for teachers and parents.
+      No technical knowledge needed.
+    </p>
+
+    <div class="learn-hero-grid">
+      <div class="learn-pill">
+        <div class="learn-pill-title">🎭 Scam Pretending</div>
+        <div class="learn-pill-text">Scammers pretend to be a bank, courier, school, or government.</div>
+      </div>
+      <div class="learn-pill">
+        <div class="learn-pill-title">⚡ Pressure</div>
+        <div class="learn-pill-text">They rush you: “urgent”, “now”, “last chance”.</div>
+      </div>
+      <div class="learn-pill">
+        <div class="learn-pill-title">🔗 Risky Links</div>
+        <div class="learn-pill-text">They push you to click a link or open a form.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick checklist -->
+  <div class="learn-card card">
+    <h3>✅ Quick Checklist (Read This First)</h3>
+    <ul class="learn-checklist">
+      <li><strong>Stop:</strong> Don’t click links immediately.</li>
+      <li><strong>Check the sender:</strong> Is it a real official number/account?</li>
+      <li><strong>Look for pressure:</strong> “urgent”, “now”, “account blocked”.</li>
+      <li><strong>Never share OTP/TAC/password</strong> even if they sound “official”.</li>
+      <li><strong>Verify using official channels:</strong> official website/app (not the message link).</li>
+    </ul>
+    <p class="helper-note">
+      If you’re unsure, ask another teacher/parent or contact the organization using the official number.
+    </p>
+  </div>
+
+  <!-- What is phishing -->
+  <section class="learn-card card">
+    <h3>What is Phishing?</h3>
+    <p>
+      Phishing is a scam where attackers try to steal personal information such as passwords,
+      OTP/TAC codes, bank details, or even your identity by pretending to be someone you trust.
+    </p>
+    <p>
+      On messaging apps, phishing often looks like a “school update”, “bank warning”, “parcel delivery issue”,
+      or “payment confirmation” — but it is fake.
+    </p>
+  </section>
+
+  <!-- Common scam types -->
+  <section class="learn-card card">
+    <h3>Common Phishing Scams in Messaging Apps</h3>
+
+    <div class="learn-grid">
+      <div class="learn-box">
+        <h4>🏦 Bank / Account Scam</h4>
+        <p>“Account locked. Verify now.” “Suspicious login detected.”</p>
+      </div>
+
+      <div class="learn-box">
+        <h4>📦 Parcel / Delivery Scam</h4>
+        <p>“Parcel cannot be delivered. Pay delivery fee.”</p>
+      </div>
+
+      <div class="learn-box">
+        <h4>🎁 Prize / Giveaway Scam</h4>
+        <p>“You won RM500 voucher. Claim now.”</p>
+      </div>
+
+      <div class="learn-box">
+        <h4>👤 Impersonation Scam</h4>
+        <p>“I’m your friend/teacher. Please transfer money urgently.”</p>
+      </div>
+
+      <div class="learn-box">
+        <h4>💼 Job / Investment Scam</h4>
+        <p>“Earn RM300/day. Easy job.” “Guaranteed profit.”</p>
+      </div>
+
+      <div class="learn-box">
+        <h4>🔐 OTP / TAC Scam</h4>
+        <p>“Give OTP to confirm account.” (Real services don’t ask this.)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Red flags -->
+  <section class="learn-card card">
+    <h3>🚩 Red Flags (Warning Signs)</h3>
+
+    <ul class="learn-checklist">
+      <li><strong>Urgent / pressure words:</strong> “cepat”, “urgent”, “sekarang”, “last chance”.</li>
+      <li><strong>Asking for sensitive info:</strong> OTP/TAC, password, bank account number.</li>
+      <li><strong>Strange link:</strong> short links (bit.ly), weird domains, many symbols, unusual endings (.xyz).</li>
+      <li><strong>Too good to be true:</strong> big rewards, gifts, huge discounts.</li>
+      <li><strong>Sender doesn’t match:</strong> “bank” message from random phone number or free email.</li>
+      <li><strong>Spelling/grammar issues</strong> or unnatural mixed language can appear in scams.</li>
+    </ul>
+  </section>
+
+  <!-- What to do -->
+  <section class="learn-card card section-important">
+    <h3>🛡️ What You Should Do</h3>
+    <ol class="learn-steps">
+      <li><strong>Do not click</strong> links or download files.</li>
+      <li><strong>Do not share OTP/TAC/password</strong>.</li>
+      <li><strong>Verify</strong> using official app/website (type it yourself, don’t tap link).</li>
+      <li><strong>Ask for confirmation</strong> (e.g., school office / bank hotline).</li>
+      <li><strong>Report</strong> the scam if possible.</li>
+    </ol>
+    <p class="helper-note">
+      PhiShield helps explain why a message looks suspicious, so users can learn and avoid scams next time.
+    </p>
+  </section>
+
+  <!-- Local official resources -->
+  <section class="learn-card card">
+    <h3>Official Resources (Malaysia)</h3>
+    <p>Use trusted official resources to learn and report scams:</p>
+    <ul class="learn-links">
+      <li><a href="https://www.mcmc.gov.my/" target="_blank" rel="noopener">MCMC Malaysia</a> – scam awareness & digital safety</li>
+      <li><a href="https://www.ccid.rmp.gov.my/" target="_blank" rel="noopener">CCID RMP</a> – Commercial Crime Investigation Department</li>
+      <li><a href="https://www.consumer.org.my/" target="_blank" rel="noopener">Consumer Association of Penang (CAP)</a> – consumer scams awareness</li>
+      <li><a href="https://www.mycert.org.my/" target="_blank" rel="noopener">MyCERT</a> – cybersecurity alerts and advisories</li>
+    </ul>
+
+    <p class="helper-note">
+      Tip: Always use official websites/apps. Avoid numbers/links sent inside suspicious messages.
+    </p>
+  </section>
+
+  <!-- Optional deeper info -->
+  <details class="learn-card card details-box">
+    <summary>More Details (Optional)</summary>
+
+    <h3 style="margin-top: 12px;">Why Scammers Use Links</h3>
+    <p>
+      Scam links often open fake login pages that look real. If you type your password or OTP there,
+      scammers can steal your account or money.
+    </p>
+
+    <h3 style="margin-top: 12px;">What is a “Domain” (Website Name)?</h3>
+    <p>
+      A domain is the website name like <strong>maybank2u.com.my</strong> or <strong>moe.gov.my</strong>.
+      Scammers often use similar names like <strong>maybank2u-login.xyz</strong> to trick victims.
+    </p>
+  </details>
+
+  <!-- Back -->
+  <div class="footer">
+    <a href="{{ url_for('index') }}" class="btn-back">Back to Message Detection</a>
+    <p>PhiShield © 2026 | Developed for phishing awareness</p>
+  </div>
+
+</div>
+</body>
+</html>

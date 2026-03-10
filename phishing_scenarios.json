@@ -1,0 +1,24 @@
+{
+  "phishing_scenarios": [
+    {
+      "message": "RM0 KWSP: Acc anda tlh disekat bcz security policy update. Sila verify dlm 24hrs utk avoid permanent block. Click: [malicious link]",
+      "context": "Phishing attempt pretending to be from KWSP about account suspension. Uses urgency to pressure the victim into clicking the link.",
+      "red_flag": "KWSP will never send verification requests via links in SMS. Always verify through the official EPF portal."
+    },
+    {
+      "message": "Hi, sy drpd Shopee Customer Service. Order #28394 xdpt hantar. We want to refund back ur money to bank. Sile tekan link ni utk isi detail bank: [malicious link]",
+      "context": "Fake refund scam using Shopee as a guise. The message mimics official customer service tone.",
+      "red_flag": "Shopee only processes refunds through their official app. Avoid clicking on external links in SMS."
+    },
+    {
+      "message": "PDRM: Tahniah! You got 50% discount utk bayar saman traffic. Promo ends tonite. Sila check saman & pay via portal rasmi MyBayar: [malicious link]",
+      "context": "Fake traffic fine discount from PDRM, attempting to create urgency and entice the victim to pay a fake fine.",
+      "red_flag": "PDRM does not offer discount promotions via SMS. Always check summons through the official MyBayar portal."
+    },
+    {
+      "message": "Part-time job vacancy! Gaji RM300-RM500 sehari. Just like & share product. Kerja senang je dr rumah. Kalu minat, wasap sy skrg: [malicious link]",
+      "context": "Fake part-time job scam. Promises high earnings for simple tasks, a common tactic to lure victims.",
+      "red_flag": "Legitimate jobs will never ask you to share or like products as part of the hiring process. Be wary of fake job offers promising quick money."
+    }
+  ]
+}

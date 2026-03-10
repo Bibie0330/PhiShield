@@ -1,0 +1,228 @@
+{
+  "safe_links": [
+    "google.com", "youtube.com", "gmail.com",
+    "drive.google.com", "docs.google.com", "classroom.google.com",
+    "canva.com", "zoom.us", "meet.google.com",
+    "microsoft.com", "office.com", "outlook.com",
+    "apple.com", "icloud.com",
+
+    "telegram.org", "t.me", "whatsapp.com", "wa.me",
+
+    "maybank2u.com.my", "cimb.com.my", "bankislam.biz",
+    "hongleongconnect.my", "pbebank.com",
+
+    "hasil.gov.my", "kwsp.gov.my", "moe.gov.my",
+    "apdm.moe.gov.my", "delim.edu.my",
+
+    "shopee.com.my", "lazada.com.my", "grab.com",
+    "foodpanda.my", "touchngo.com.my"
+  ],
+
+  "suspected_links": [
+    "portaltechni.my.canva.site",
+    "example.com",
+    "phishingsite.xyz",
+    "malicious-link.com",
+    "fakebanking.site",
+    "secure-login-verification.xyz",
+    "bank-update.click"
+  ],
+
+  "shortforms": {
+    "acc": "Account",
+    "tlh": "Telah",
+    "dgn": "Dengan",
+    "kat": "Kat",
+    "sy": "Saya",
+    "nk": "Nak",
+    "bdk": "Budak",
+    "utk": "Untuk",
+    "brp": "Berapa",
+    "x": "Tak",
+    "bcz": "Because",
+    "pls": "Please",
+    "tq": "Thank you",
+    "gtg": "Got to go",
+    "sbnr": "Sebenarnya"
+  },
+
+  "sense_of_urgency": [
+    "urgent",
+    "action required",
+    "immediate action",
+    "final warning",
+    "account suspended",
+    "account locked",
+    "security alert",
+    "problem with your payment",
+    "time running out",
+    "last chance",
+    "final notice",
+    "pay now to avoid penalty",
+    "verify immediately",
+    "within 24 hours"
+  ],
+
+  "authority_impersonation": [
+    "from: bank",
+    "from: government agency",
+    "from: it department",
+    "irs",
+    "tax refund",
+    "official notice",
+    "ministry",
+    "paypal security",
+    "amazon support",
+    "apple support"
+  ],
+
+  "suspicious_sender_details": [
+    "from: @gmail.com",
+    "from: @yahoo.com",
+    "from: @outlook.com",
+    "from: @hotmail.com",
+    "reply-to: no-reply",
+    "reply-to: @unknown.com",
+    "from: @suspiciousdomain.com"
+  ],
+
+  "generic_greetings": [
+    "Dear Customer",
+    "Dear User",
+    "Hello",
+    "Hi there",
+    "Dear Sir/Madam",
+    "Dear valued customer",
+    "To whom it may concern"
+  ],
+
+  "suspicious_links_attachments": [
+    "click here",
+    "download attachment",
+    "open file",
+    "click to claim",
+    "open this link",
+    "download now",
+    "tap link below"
+  ],
+
+  "poor_grammar": [
+    "urgently pls respond",
+    "click quick for reward",
+    "pls urgent",
+    "confirm immediatly",
+    "definitely pay now",
+    "free cash prize",
+    "verify identity now",
+    "pls click for prize"
+  ],
+
+  "requests_for_sensitive_information": [
+    "enter your password",
+    "send credit card number",
+    "enter bank account details",
+    "verify your identity",
+    "provide social security number",
+    "send bank info",
+    "enter pin number",
+    "send otp code",
+    "share tac number"
+  ],
+
+  "offers_too_good_to_be_true": [
+    "you have won lottery",
+    "claim your prize",
+    "exclusive offer",
+    "win free vacation",
+    "earn money quickly",
+    "get free iphone",
+    "claim free gift",
+    "limited time offer"
+  ],
+
+  "local_context_keywords": {
+    "epf": [
+      "acc disekat",
+      "sila verify",
+      "security policy update",
+      "sila klik link",
+      "verify identity"
+    ],
+
+    "bank_alert": [
+      "acc blocked",
+      "click to unblock",
+      "verify account",
+      "suspicious login detected",
+      "secure your account"
+    ],
+
+    "parcel_delivery": [
+      "xdpt hantar",
+      "update your address",
+      "click confirm delivery",
+      "pay delivery fee"
+    ],
+
+    "malaysia_tax": [
+      "sila bayar cukai",
+      "pengesahan cukai",
+      "bayaran cukai lewat"
+    ]
+  },
+
+  "manglish_phrases": [
+    "boss ur order got problem",
+    "can or not",
+    "dont play play",
+    "no need lah",
+    "walao eh",
+    "alamak",
+    "macha",
+    "abang",
+    "sis",
+    "quick lah"
+  ],
+
+  "localized_shortforms": {
+    "acc": "Account",
+    "tlh": "Telah",
+    "sy": "Saya",
+    "nk": "Nak",
+    "x": "Tak",
+    "utk": "Untuk",
+    "brp": "Berapa",
+    "jap": "Sekejap",
+    "bcz": "Because",
+    "mcm": "Macam",
+    "mane": "Mana",
+    "msti": "Mesti",
+    "sblm": "Sebelum",
+    "dlm": "Dalam"
+  },
+
+  "emotional_triggers": [
+    "reward",
+    "prize",
+    "exclusive offer",
+    "special deal",
+    "act now",
+    "urgent",
+    "limited offer"
+  ],
+
+  "imperative_commands": [
+    "tekan",
+    "klik",
+    "click",
+    "open",
+    "claim",
+    "download",
+    "confirm",
+    "enter",
+    "verify",
+    "send",
+    "check",
+    "claim now"
+  ]
+}
